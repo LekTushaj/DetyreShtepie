@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format</title>
+    <style>
+        #titulli {
+            background-color: darkturquoise;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <h1 id="titulli">Aplikim Per Regjistrim ne Fakultet</h1>
+    <br><br>
+    
+        <form>
+
+           <label for="emri">Emri:</label> 
+            <input type="text" name="emri" placeholder="Emri" id="emri">
+            <br><br>
+            <label for="mbiemri"> Mbiemri:</label> 
+            <input type="text" name="mbiemri" placeholder="Mbiemri" id="mbiemri">
+            <br><br>
+            <label for="datelindja"> Datëlindja: </label> 
+            <input type="date" name="datëlindja" placeholder="Datëlindja" id="datelindja">
+            <br><br>
+            <label for="vendlindja"> Vendlindja:</label>
+            <input type="text" name="vendlindja" placeholder="Vendlindja" id="vendlindja">
+            <br><br>
+            <label for="gjinia"> Gjinia:</label>
+            <input type="radio" name="gjinia" id="gjinia"> M 
+            <input type="radio" name="gjinia" id="gjinia"> F
+            <br><br>
+            <label for="tel"> Tel: <b>+386</b></label>
+            <input type="tel" name="tel" placeholder="XX XX XX" id="tel">
+            <br><br>
+            <label for="email"> E-mail:</label>
+            <input type="email" name="e-maili" placeholder="sheno e-mail-in tuaj" id="email" required/>
+            <br><br>
+            <label for="arsimimi">Arsimimi:</label>
+            <input type="text" name="arsimimi" placeholder="Arsimimi" id="arsimimi">
+            <br><br>
+            <label for="adresa"> Adresa:</label> <br>
+            <textarea name="adresa" cols="30" rows="5" id="adresa"></textarea>
+            <br><br>
+            <label for="cv">CV-ja</label> 
+            <input type="file" name="cv" placeholder="cv-ja" id="cv">
+            <br><br>
+            <label for="fakulteti"> Fakulteti që doni të studioni:</label><br>
+            <select name="fakulteti" id="fakulteti">
+                <option value="" selected> Zgjedh njërin nga Fakultetet </option>
+                <option value="fakulteti_ekonomik"> Fakulteti Ekonomik </option>
+                <option value="fakulteti_juridik"> Fakulteti Juridik </option>
+                <option value="Shkenca_politike"> fakulteti Shkenca Politike </option>
+                <option value="informatikë"> Fakulteti informatikës </option>
+                <option value="fakulteti_administratë)publike"> Fakulteti Administratë Publike </option>
+            </select>
+            <br><br>
+            <label> çka kërkoni nga ky universitet?..</label><br>
+            <input type="checkbox" name="mësimdhënia" value="cilësi_në_mësim"> Mësimdhënie Cilësore <br>
+            <input type="checkbox" name="orari" value="Rrespektim_orari"> Rrespektim Të Orarit <br>
+            <input type="checkbox" name="kushtet" value="kushte_mësimre"> Kushte të mira për Mësim  <br>
+            <input type="checkbox" name="dija" value="dije_konkuruese"> Dije konkurruese <br>
+            <br><br>
+            <label for="mesazhi"> Mesazhi Juaj:</label> <br>
+            <textarea name="mesazhi"  cols="30" rows="10" id="mesazhi"></textarea> <br>
+            <br><br>
+            <input type="submit" name="dergo" value="Dergo"> 
+            <br><br>
+        </form>
+        <br>
+        <a href="#titulli">Titulli</a>
+        <br><br>
+        
+    
+
+
+
+
+
+</body>
+</html>
