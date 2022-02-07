@@ -44,11 +44,13 @@ section {
     display: inline-block;
     font-size: 20px;
     color: #FFCC00;
-    background: black;
+    background: #192a56;
     border-radius: 5px;
     cursor: pointer;
     padding: 8px 30px;
 }
+
+
 
 .btn:hover {
     background: #FF9900;
@@ -68,7 +70,7 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: 5px solid black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
 }
 
 header .logo {
@@ -347,6 +349,57 @@ header .navbar a:hover {
   }
 
 
+  /* Footer */
+
+  footer {
+    color: #fff;
+    background-color: #004a99;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.footer-title {
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    margin-top: 18px;
+}
+
+.flex-row  {
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+ .footer-container .flex-row  a {
+    padding:  0 15px;
+    margin-bottom: 16px;
+}
+
+
+
+.footer-container .flex-row a i {
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+
 
                         /* Media Queries  */
 
@@ -359,6 +412,11 @@ header .navbar a:hover {
         font-size: 50%;
     }
 
+    .btn {
+        font-size: 15px;
+        padding: 4px 15px;
+    }
+
 .home {
     margin-top: 30px;
 }
@@ -368,9 +426,7 @@ header .navbar a:hover {
         font-size: 10px;
     }
     .home .home-slider .slide .content p {
-        color: #CC6600;
         font-size: 15px;
-        font-weight: bolder;
         padding: 50px 0px;
         line-height: 25px;
     }
@@ -382,6 +438,45 @@ header .navbar a:hover {
     .porosia form .inputBox .input {
         width: 100%;
     }
+    .specialitetet .box-container .box img {
+        height: 100px;
+        margin: 10px 0;
+    }
+    
+    .specialitetet .box-container .box h3 {
+        color: black;
+        font-size: 20px;
+    }
+    
+    .specialitetet .box-container .box span {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    .menyja .box-container .box .content {
+        padding: 10px;
+        padding-top: 0px;
+    }
+  
+    .menyja .box-container .box .content h3 {
+        color: black;
+        font-size: 19px;
+    }
+  
+    .menyja .box-container .box .content p {
+      font-size: 14px;
+      padding: 5px 0;
+      line-height: 1.5;
+    }
+  
+    .menyja .box-container .box .content .price {
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+
+
 }
 
 
@@ -414,7 +509,19 @@ header .navbar a:hover {
     .heading {
         font-size: 6px;
     }
-
+    .btn {
+        font-size: 16px;
+        padding: 6px 16px;
+    }
+    .specialitetet .box-container .box h3 {
+        color: black;
+        font-size: 21px;
+    }
+    .menyja .box-container .box .content h3 {
+        color: black;
+        font-size: 22px;
+    }
+   
 }
 
 /* Laptop */
@@ -443,4 +550,104 @@ header .navbar a:hover {
     }
 }
 
+
+
+
+
+
+                        /* Media Queries  
+
+
+
+/* Mobile 
+
+@media (max-width:599px) {
+    html {
+        font-size: 50%;
+    }
+
+.home {
+    margin-top: 30px;
+}
+
+    .home .home-slider .slide .content h3 {
+        color: black;
+        font-size: 10px;
+    }
+    .home .home-slider .slide .content p {
+        color: #CC6600;
+        font-size: 15px;
+        font-weight: bolder;
+        padding: 50px 0px;
+        line-height: 25px;
+    }
+
+    .specialitetet .box-container .box img {
+        height: auto;
+        width: 100%;
+    }
+    .porosia form .inputBox .input {
+        width: 100%;
+    }
+}
+
+
+/* Tablet 
+
+@media (max-width:768px) {
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        right: 0px;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        padding: 10px;
+    }
+    header  .logo {
+        margin: 0 auto;
+    }
+    header .navbar a{
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3px;
+        margin: 2px;
+        font-size: 16px;
+        background: #eee;
+    }
+
+    .heading {
+        font-size: 6px;
+    }
+
+}
+
+/* Laptop 
+
+@media (max-width:1200px){
+    html {
+        font-size: 50%;
+    }
+
+    .specialitetet .box-container .box img {
+        height: auto;
+        width: 100%;
+    }
+
+    .porosia form .inputBox .input {
+       width: 100%; 
+    }
+
+
+
+    header {
+        padding: 10px 20px;
+    }
+    section {
+        padding: 20px;
+    }
+}
+*/
 
