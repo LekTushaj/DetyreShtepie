@@ -296,57 +296,69 @@ header .navbar a:hover {
       font-weight: bolder;
   }
 
-  /* Porosia */
+   /* Porosia */
+ 
 
-  .porosia form {
-      max-width: 900px;
-      border-radius: 5px;
-      box-shadow: #fff;
-      border: 10px solid rgba(0, 0, 0, .2);
-      background: #fff;
-      padding: 15px;
-      margin: 0 auto;
-  }
+ #form {
+    width: 300px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: wheat;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 900;
 
-  .porosia form .inputBox {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-  }
+}
 
-  .porosia form .inputBox .input {
-      width: 49%;
-  }
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
 
-  .porosia form .inputBox .input span {
-      display: block;
-      padding: 5px 0;
-      font-size: 20px;
-      color: black;
-      font-weight: bolder;
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
 
-  }
+.input-control {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;  
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px;
+    width: 100%;
+}
+.input-control input:focus {
+    outline: 0;
+}
+.input-control.success input {
+    border-color: #09c372;
+}
+.input-control.error input {
+    border-color: #ff3860;
+}
+.input-control.error {
+    color: #ff3860;
+    font-size: 16px;
+    font-weight: 900;
+}
 
-  .porosia form .inputBox .input input,
-  .porosia form .inputBox .input textarea{
-      background: #eee;
-      border-radius: 5px;
-      padding: 10px;
-      font-size: 16px;
-      color: black;
-      text-transform: none;
-      margin-bottom: 10px;
-      width: 100%;
-  }
-
-  .porosia form .inputBox .input textarea {
-      height: 200px;
-      resize: none;
-  }
-  
-  .porosia form .inputBox .btn {
-      margin-top: 0;
-  }
+/* --- fundi CSS-form ---*/
 
 
   /* Footer */
@@ -555,99 +567,4 @@ p {
 
 
 
-                        /* Media Queries  
-
-
-
-/* Mobile 
-
-@media (max-width:599px) {
-    html {
-        font-size: 50%;
-    }
-
-.home {
-    margin-top: 30px;
-}
-
-    .home .home-slider .slide .content h3 {
-        color: black;
-        font-size: 10px;
-    }
-    .home .home-slider .slide .content p {
-        color: #CC6600;
-        font-size: 15px;
-        font-weight: bolder;
-        padding: 50px 0px;
-        line-height: 25px;
-    }
-
-    .specialitetet .box-container .box img {
-        height: auto;
-        width: 100%;
-    }
-    .porosia form .inputBox .input {
-        width: 100%;
-    }
-}
-
-
-/* Tablet 
-
-@media (max-width:768px) {
-    header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0px;
-        right: 0px;
-        background: #fff;
-        border-top: 1px solid rgba(0, 0, 0, .2);
-        padding: 10px;
-    }
-    header  .logo {
-        margin: 0 auto;
-    }
-    header .navbar a{
-        text-align: center;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 3px;
-        margin: 2px;
-        font-size: 16px;
-        background: #eee;
-    }
-
-    .heading {
-        font-size: 6px;
-    }
-
-}
-
-/* Laptop 
-
-@media (max-width:1200px){
-    html {
-        font-size: 50%;
-    }
-
-    .specialitetet .box-container .box img {
-        height: auto;
-        width: 100%;
-    }
-
-    .porosia form .inputBox .input {
-       width: 100%; 
-    }
-
-
-
-    header {
-        padding: 10px 20px;
-    }
-    section {
-        padding: 20px;
-    }
-}
-*/
-
+                       
