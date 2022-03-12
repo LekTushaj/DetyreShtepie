@@ -22,6 +22,7 @@
             <a href="#info">Info</a>
             <a href="#menyja">Menyja</a>
             <a href="#form">Porosia</a>
+            <a href="#api">API</a>
         </nav>
     </header>    
 
@@ -327,8 +328,79 @@
 
     <!--Porosia section ends  -->
 
-       
+    <!--  api html-->
 
+    <div class="meal-container" id="api">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+                <h2 class="title">Gjeni Ushqimin Për Përbërësit-ushqimor që Keni:</h2>
+                <blockquote>Ushqimi Real nuk ka përbërës,
+                    Ushqimi Real  është Vet-Përbërës. <br>
+                    <cite>Jamier Oliver</cite>
+                </blockquote>
+                <div class="meal-search-box">
+                    <input type="text" class="search-control"
+                     placeholder="shkruaj një përbërës-ushqimor" id="search-input">
+                     <button type="submit" class="search-btn btn" id="search-btn">
+                         <i class="fas fa-search"></i> <!--KERKO-->
+                     </button>
+                </div>
+            </div>
+            <div class="meal-result">
+                <h2 class="title">Rezultatet e Kërkimit Tuaj:</h2>
+                <div id="meal">
+                    <!-- Meal Item
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="image/image-1.jpg" alt="food">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Patato Chips</h3>
+                            <a href="#" class="recipe-btn">Shfaq Recepin</a>
+                        </div>
+                    </div>
+                    End of Meal Item-->
+                    
+                    <!--End of Meal Item-->
+                </div>
+            </div>
+            <div class="meal-details">
+                <!--Recipe close button -->
+                <button type="button" class="btn recipe-close-btn"
+                 id="recipe-close-btn" >
+                 <i class="fas fa-times"></i> <!--close button-->
+                </button>
+                <!--Meal content-->
+                <div class="meal-details-content">
+                    <h2 class="recipe-title"> Emri Ushqimit </h2>
+                    <p class="recipe-category"> Kategoria</p>
+                    <div class="recipe-instruct">
+                        <h3>Instruksionet:</h3>
+                        <p>Lorem Ipsum is simply dummy text
+                             of the printing and typesetting industry.
+                             Lorem Ipsum has been the industry's standard
+                              dummy text ever since the 1500s.
+                              Lorem Ipsum has been the industry's standard
+                              dummy text ever since the 1500s</p>
+                        <p>Lorem Ipsum is simply dummy text
+                            of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard
+                             dummy text ever since the 1500s.
+                        </p>
+
+                    </div>
+                    <div class="recipe-meal-img">
+                        <img src="image/image-1.jpg" alt="">
+                    </div>
+                    <div class="recipe-link">
+                        <a href="#" target="_blank">Shiko Video-n</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end api html-->
 
     </section>
 
@@ -488,6 +560,53 @@
          };
  
          // end of form validation
+
+         // Task-3: Api consumption JavaScript 
+
+     const searchBtn = document.getElementById('search-btn');
+     const mealList = document.getElementById('meal');
+     const mealdetailsContent = document.querySelector('.meal-details-content');
+     const recipeCloseBtn = document.getElementById('recipe-close-btn');
+
+     // Event Listeners
+
+     searchBtn.addEventListener('click', getMealList);
+
+     // get meal list that matches with the ingredients
+
+     function getMealList() {
+         let searchInputTxt = document.getElementById('search-input').value.trim();
+                            //   API-Adress 
+         fetch('https://www.themealdb.com/api/json/v1/1/filter.php?i=egg')
+         .then(response => response.json())
+         .then(data => {
+             let html =   ''; 
+             if(data.meals){
+                 data.meals.forEach(meal => {
+                     html += `
+                            <div class="meal-item"  data-id="${meal.idMeal}" >
+                                <div class="meal-img">
+                                     <img src="${meal.strMealThumb}" alt="food">
+                                </div>
+                                <div class="meal-name">
+                                         <h3>${meal.strMeal}</h3>
+                                         <a href="#" class="recipe-btn">Shfaq recepin</a>
+                                </div>
+                            </div>
+                             `;
+                     });
+              } else{
+                  html ='Nuk Kemi gjetur ndonje rezultat';
+              }
+                 mealList.innerHTML = html;
+             });
+         }
+
+         
+     /*
+    
+    */
+
  
      </script>
  
