@@ -1,0 +1,23 @@
+{% extends 'baza/main.html' %}
+
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'detyrat' %}"><strong>&#8592;Kthehu</strong></a>
+</div>
+
+<div class="card-body">
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input class="button" type="submit" value="submit">
+</form>
+</div>
+
+
+{% endblock content %}
+
+
+
+
+
