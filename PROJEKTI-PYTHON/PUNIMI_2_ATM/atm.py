@@ -1,7 +1,7 @@
 print("Welcome to ATM-BANKING !!")
 password = 1234
 provaPasswordit = 3
-bilanci = 1000
+bilanci = 0
 
 while provaPasswordit != 0:
     passwordiUserit = int(input("Shkruani Password-in Tuaj:"))
